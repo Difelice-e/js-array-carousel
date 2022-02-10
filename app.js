@@ -28,24 +28,34 @@ let currentIndex = 0;
 
 for (i = 0; i < items.length; i++) {
     const divElement = document.createElement('div');
+    console.log(divElement);
     const divInfo = document.createElement('div');
-    const imgElement = `<img src="${items[i]}"`;
+    console.log(divInfo);
+    const imgElement = document.createElement('img');
+    imgElement.src = `${items[i]}`;
+    console.log(imgElement);
     const divTitle = `<h1>${title[i]}</h1>`;
+    console.log(divTitle)
     const divText = `<p>${text[i]}</p>`;
+    console.log(divText);
     const sliderWrapper = document.getElementsByClassName('slider-wrapper');
+    console.log(sliderWrapper);
 
     if (i == 0) {
         divElement.classList.add("active");
         currentIndex = 0;
     }
     
+    sliderWrapper[0].append(divElement);
     divInfo.append(divTitle, divText);
     divElement.append(imgElement, divInfo);
-    sliderWrapper.innerHTML += divElement;
+    
 
     divElement.classList.add("item");
     divInfo.classList.add("item-info");
 
-    console.log(divInfo, divElement)
+    // console.log(divInfo, divElement)
     
-}
+};
+
+// `<img src="${items[i]}">;`
