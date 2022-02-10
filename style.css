@@ -15,7 +15,7 @@ main {
     flex-grow: 1;
 }
 
-.slider-wrapper .item {
+.item {
     display: none;
     height: 100%;
     width: 100%;

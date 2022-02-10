@@ -23,8 +23,29 @@ const text = [
 ];
 
 
+
 let currentIndex = 0;
 
 for (i = 0; i < items.length; i++) {
+    const divElement = document.createElement('div');
+    const divInfo = document.createElement('div');
+    const imgElement = `<img src="${items[i]}"`;
+    const divTitle = `<h1>${title[i]}</h1>`;
+    const divText = `<p>${text[i]}</p>`;
+    const sliderWrapper = document.getElementsByClassName('slider-wrapper');
+
+    if (i == 0) {
+        divElement.classList.add("active");
+        currentIndex = 0;
+    }
+    
+    divInfo.append(divTitle, divText);
+    divElement.append(imgElement, divInfo);
+    sliderWrapper.innerHTML += divElement;
+
+    divElement.classList.add("item");
+    divInfo.classList.add("item-info");
+
+    console.log(divInfo, divElement)
     
 }
