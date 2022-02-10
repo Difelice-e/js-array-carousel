@@ -12,7 +12,7 @@ const title = [
     'Gran Bretagna',
     'Germania',
     'Paradise'
-]
+];
 
 const text = [
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
@@ -20,4 +20,11 @@ const text = [
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
     'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-]
+];
+
+
+let currentIndex = 0;
+
+for (i = 0; i < items.length; i++) {
+    
+}
