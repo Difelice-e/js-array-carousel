@@ -7,7 +7,7 @@ main {
 
 .slider {
     height: 50vh;
-    width: 70vw;
+    width: 65vw;
     display: flex;   
 }
 
@@ -29,6 +29,14 @@ main {
     object-position: center;
 }
 
+.info-title {
+    font-size: 1.5rem;
+}
+
+.info-text {
+    font-size: 12px;
+}
+
 .slider-wrapper .item-info {
     position: absolute;
     color: white;
@@ -44,7 +52,7 @@ main {
 }
 
 .control-wrapper {
-    width: 200px;
+    width: 280px;
     position: relative;
 }
 

@@ -38,7 +38,7 @@ for (i = 0; i < items.length; i++) {
     console.log(divTitle)
     const divText = `<p>${text[i]}</p>`;
     console.log(divText);
-    const sliderWrapper = document.getElementsByClassName('slider-wrapper');
+    const sliderWrapper = document.querySelector('.slider-wrapper');
     console.log(sliderWrapper);
 
     if (i == 0) {
@@ -46,7 +46,7 @@ for (i = 0; i < items.length; i++) {
         currentIndex = 0;
     }
     
-    sliderWrapper[0].append(divElement);
+    sliderWrapper.append(divElement);
     divInfo.append(divTitle, divText);
     divElement.append(imgElement, divInfo);
     
@@ -58,4 +58,20 @@ for (i = 0; i < items.length; i++) {
     
 };
 
-// `<img src="${items[i]}">;`
+
+for (i = 0; i < items.length; i++) {
+    const controlWrapper = document.querySelector('.control-wrapper');
+    
+    const imgThumbElement = document.createElement('img');
+    imgThumbElement.src = `${items[i]}`;
+
+    const prevControl = document.createElement('span');
+    const nextControl = document.createElement('span');
+
+    controlWrapper.append(imgThumbElement, prevControl, nextControl);
+    prevControl.innerHTML = "&uarr;";
+    prevControl.innerHTML = "&darr;"
+
+    prevControl.classList.add("prev");
+    nextControl.classList.add("next");
+}
